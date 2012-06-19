@@ -1,0 +1,28 @@
+name = gazebo
+description = Flexible two-, three-column or full-width Drupal template.
+version = VERSION
+core = 7.x
+engine = phptemplate
+stylesheets[all][] = _ubc_clf/css/clf-required-fixedwidth.css
+;stylesheets[all][] = _ubc_clf/css/clf-2-column.css
+stylesheets[all][] = _ubc_clf/css/clf-optional.css
+stylesheets[all][] = _ubc_clf/css/clf-typography.css
+stylesheets[all][] = style.css
+stylesheets[all][] = _ubc_clf/css/ui.css
+stylesheets[print][] = print.css
+
+scripts[] = js/jquery.cycle.min.js
+scripts[] = _ubc_clf/js/config.js
+scripts[] = _ubc_clf/js/main.js
+scripts[] = js/ubc_clf.js
+
+regions[header] = Header
+regions[sidebar_first] = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[tab_widget] = Tab Widget
+regions[content] = Content
+regions[content_top] = Content Top
+regions[content_bottom] = Content Bottom
+regions[prefooter] = Pre-footer
+regions[subfooter] = Subfooter
+regions[submenu_top] = Submenu Top
