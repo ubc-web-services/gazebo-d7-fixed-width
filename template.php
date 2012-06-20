@@ -52,19 +52,21 @@ function gazebo_preprocess_page(&$vars) {
   if(theme_get_setting('clf_dropdown_show')) { $vars['clf_dropdown_show'] = 'true'; } else { $vars['clf_dropdown_show'] = 'false'; }
   
   // add custom css file (if it exists)
-  if (file_exists($custom_css = conf_path() .'/css/custom.css')) {
-    $add_custom_css = 1;
+  if (file_exists(conf_path() .'/css/custom.css')) {
+    drupal_add_css(conf_path() .'/css/custom.css');
   } 
-  else {
-    $add_custom_css = 0;  
-  }
-  // add custom css file for IE (if exists)
-  if (file_exists($custom_ie_css = conf_path() .'/css/ie.css')) {
-    $add_custom_ie_css = 1;
+  
+  /**
+   * Stylesheets for IE
+   */
+  if (file_exists(conf_path() .'/css/ie.css')) {
+    // Add conditional stylesheets for IE 9 and below
+    drupal_add_css(conf_path() .'/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
   } 
-  else {
-    $add_custom_ie_css = 0;  
-  }
+  if (file_exists(conf_path() .'/css/ie7.css')) {
+    // Add conditional stylesheets for IE 7 and below
+    drupal_add_css(conf_path() .'/css/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
+  } 
   
   $vars['custom_css'] = $add_custom_css;
   $vars['custom_ie_css'] = $add_custom_ie_css;
@@ -184,7 +186,9 @@ function gazebo_dropdown($menu) {
 
     $i = 0;
 
-	$tree = menu_tree_page_data($menu);
+	// $tree = menu_tree_page_data($menu);
+    $tree = menu_tree_all_data($menu);
+
 
 	$html = '<ul id="UbcMainNav" class="UbcContainer ' . theme_get_setting('clf_dropdown_style') . '">';
 
