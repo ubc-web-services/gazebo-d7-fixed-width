@@ -144,6 +144,14 @@ function gazebo_ubc_clf_toolbar($variables) {
   else {
     $search_text = t('Search ') . theme_get_setting('clf_unitname');
   }
+  
+  // get search domain if set
+  $search_domain = '';
+  if (theme_get_setting('clf_searchdomain')) {
+	 $search_domain = theme_get_setting('clf_searchdomain');
+	 $search_domain = '<input type="hidden" name="label" value="'.$search_domain.'" class="UbcSearchField" />'.
+	 				  '<input type="hidden" name="site" value="'.$search_domain.'" class="UbcSearchField" />';
+  }
 
   $output = '
   <div id="UbcToolBarWrapper">
@@ -153,8 +161,8 @@ function gazebo_ubc_clf_toolbar($variables) {
     l(t('Campuses'), 'http://www.ubc.ca/campuses/', array('attributes' => array('id' => 'UbcCampusLinks')) ),
     l(t('UBC Directories'), 'http://www.ubc.ca/directories/', array('attributes' => array('id' => 'UbcDirectLinks')) ),
     l(t('Quick Links'), 'http://www.ubc.ca/quicklinks/', array('attributes' => array('id' => 'UbcQuickLinks')) ),
-    '<form id="UbcSearchForm" action="http://www.ubc.ca/search/" method="get">
-       <input type="text" name="q" value="' . $search_text . '" class="UbcSearchField" />
+    '<form id="UbcSearchForm" action="http://www.ubc.ca/search/refine/" method="get">
+       <input type="text" name="q" value="' . $search_text . '" class="UbcSearchField" />'.$search_domain.'
        <input type="image" src="' . base_path() . path_to_theme() . '/_ubc_clf/img/header/spacer.gif" class="UbcSearchBtn" value="Search" alt="Search" />
      </form>',
   );
