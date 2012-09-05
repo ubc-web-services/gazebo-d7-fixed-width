@@ -68,9 +68,6 @@ function gazebo_preprocess_page(&$vars) {
     drupal_add_css(conf_path() .'/css/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
   } 
   
-  $vars['custom_css'] = $add_custom_css;
-  $vars['custom_ie_css'] = $add_custom_ie_css;
-
   $vars['clf_pomlink'] = 'http://www.aplaceofmind.ubc.ca/';
   $vars['clf_pomfeed'] = theme_get_setting('clf_pomfeed');
   $vars['clf_website'] = theme_get_setting('clf_website');
