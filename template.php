@@ -25,6 +25,14 @@ function gazebo_preprocess_html(&$vars) {
   }
   $vars['classes_array'][] = ' ' . theme_get_setting('clf_colour_option') . ' ';
    
+  // add user-added CSS to theme output
+  if (theme_get_setting('paste_css')) {
+    $vars['custom_inline_css'] = '<style>' . theme_get_setting('paste_css') . '</style>';
+  }
+  else {
+    $vars['custom_inline_css'] = '';
+  }
+
 }
 
 
