@@ -87,6 +87,23 @@
           });
           $(this).find('.carousel .view-content .views-field-title').after('<div class="transparent-carousel-bg">');
         }
+        // default
+        else if ($(this).hasClass('default')) {
+          $(this).find('.carousel .view-content')
+            .after('<div class="carouselControls"><div class="start"></div><div class="stop"></div><div id="prev"></div><div class="UbcHeadlineNavPageCount"></div><div id="next"></div></div>')
+            .cycle({
+            fx: 'fade',
+            speed: cycle_speed,
+            timeout: cycle_timeout,
+            next: '#next',
+            prev: '#prev',
+            after:onAfter
+            });
+          $(this).find('.carousel .view-content .views-field-title').after('<div class="transparent-carousel-bg">');
+          $('.stop-start').click(function () {
+            $(this).toggleClass('stop');
+          });
+        }
         else if ($(this).hasClass('sliding_gallery')) {
           $(this).find('.carousel .view-content').after('<div id="nav">').cycle({
             fx: 'scrollRight',
@@ -101,5 +118,13 @@
       
     }
   };
+
+  /* added May 27, 2012 */
+  function onAfter (curr,next,opts) {
+    var caption = '' + (opts.currSlide + 1) + ' / ' + opts.slideCount;
+    $('.UbcHeadlineNavPageCount').html(caption);
+    return false; 
+  }
+
 
 }(jQuery));
