@@ -1017,3 +1017,34 @@ div.vertical-tabs {
 .option6 #UbcHeader li#UbcSubUnitLine a span {
     color: #7491A3;
 }
+
+/** Styles for TinyMCE editor */
+.mceContentBody p {
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+.mceContentBody ol, .mceContentBody ul {
+    margin: 10px 0 10px 20px;
+}
+.mceContentBody ul li {
+    list-style: disc;
+}
+.mceContentBody ol li {
+    list-style: decimal;
+}
+.mceContentBody h1, .mceContentBody h2, .mceContentBody h3, .mceContentBody h4, .mceContentBody h5, .mceContentBody h6 {
+    margin: 1em 0 0.5em 0;
+    font-weight: bold;
+    color: #123B5C;
+}
+
+.mceContentBody h2 {
+    font-size: 150%;
+}
+.mceContentBody em {
+    font-style: italic;
+}
+.mceContentBody strong {
+    font-weight: bold;
+}
+
