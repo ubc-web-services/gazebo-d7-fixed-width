@@ -1047,4 +1047,25 @@ div.vertical-tabs {
 .mceContentBody strong {
     font-weight: bold;
 }
+.mceContentBody .mceItemTable.table-with-borders th, .mceContentBody .table-with-borders.mceItemTable td, .mceContentBody .mceItemTable.table-with-borders caption {
+    border: none;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.mceContentBody .mceItemTable.table-with-borders {
+    border: none;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    width: 100%;
+}
+
+/* Table styles - if borders needed (must add .tables-with-borders class in WYSIWYG profile */
+#UbcContent .table-with-borders th, #UbcContent .table-with-borders td, #UbcContent .table-with-borders caption {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+#UbcContent table.table-with-borders {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
 
