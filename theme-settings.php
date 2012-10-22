@@ -698,6 +698,14 @@ $form['web_tools']['webmaster_tools_verification'] = array(
     '#default_value' => theme_get_setting('webmaster_tools_verification'),
 );
 
+$form['web_tools']['canonical_domain'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Add your <a href="http://googlewebmastercentral.blogspot.ca/2009/02/specify-your-canonical.html" target="_blank">canonical domain</a>'),
+    '#required' => FALSE,
+    '#default_value' => $settings['canonical_domain'],
+);
+
+
 // Social media
 // ** More settings ** //
 $form['social_media'] = array(

@@ -33,6 +33,8 @@ function gazebo_preprocess_html(&$vars) {
     $vars['custom_inline_css'] = '';
   }
 
+  $vars['canonical_domain'] = theme_get_setting('canonical_domain');  
+
 }
 
 
