@@ -1,3 +1,8 @@
+.two-cols-wide {
+	width: 780px !important;
+}
+
+
 /* CSS Document */
 #UbcContent #UbcSecondNav {
 	margin: 0;	
@@ -348,74 +353,74 @@ tr.menu-disabled {
 #UbcContentSidebar #quicktabs-1 { position: relative; margin: 0 0 20px 0; }
 
 ul.quicktabs_tabs li {
-background-color:#002859;
-border-right:1px solid ##002859;
-color:#FFFFFF;
-float:left;
-font-weight:bold;
-height:25px;
-list-style:none outside none;
-margin:0;
-padding:0;
-text-align:center;
-text-decoration:none;
+	background-color:#002859;
+	border-right:1px solid #002859;
+	color:#FFFFFF;
+	float:left;
+	font-weight:bold;
+	height:25px;
+	list-style:none outside none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	text-decoration:none;
 }
 
 ul.quicktabs_tabs li {
-background:none repeat scroll 0 0 transparent;
-display:inline;
-list-style-type:none;
-padding:2px;
+	background:none repeat scroll 0 0 transparent;
+	display:inline;
+	list-style-type:none;
+	padding:2px;
 }
 
 #UbcContentSidebar ul.quicktabs_tabs li {
-color:#FFFFFF;
-background: #7B97A8;
-font-size:0.9em;
-letter-spacing:1px;
-text-align:center;
-border-right: solid 1px white;
+	color:#FFFFFF;
+	background: #7B97A8;
+	font-size:0.9em;
+	letter-spacing:1px;
+	text-align:center;
+	border-right: solid 1px white;
 }
 
 #UbcContentSidebar ul.quicktabs_tabs li.active { background: #002859; }
 
 ul.quicktabs_tabs  {
-float:left;
-height:25px;
-margin:0 !important;
-padding:0;
-width:100%;
+	float:left;
+	height:25px;
+	margin:0 !important;
+	padding:0;
+	width:100%;
 }
 
 ul.quicktabs_tabs li a, ul.quicktabs_tabs li a:visited {
-display:block;
-float:left;
-font-size:0.95em;
-height:32px;
-line-height:26px;
-min-height:30px;
-padding:0 15px;
-position:relative;
-color: #fff !important;
-text-decoration: none !important;
-text-align: center;
+	display:block;
+	float:left;
+	font-size:0.95em;
+	height:32px;
+	line-height:26px;
+	min-height:30px;
+	padding:0 15px;
+	position:relative;
+	color: #fff !important;
+	text-decoration: none !important;
+	text-align: center;
 }
 
 ul.quicktabs_tabs li a {  }
 
 ul.quicktabs_tabs li.active a {
-background: url("_ubc_clf/img/content/selectedQuickLink.gif") no-repeat scroll center bottom;
-color:#FFFFFF;
-display:block;
-float:left;
-font-size:0.95em;
-height:32px;
-line-height:26px;
-min-height:30px;
-padding:0 15px;
-position:relative;
-text-decoration:none;
-text-align: center;
+	background: url("_ubc_clf/img/content/selectedQuickLink.gif") no-repeat scroll center bottom;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	font-size:0.95em;
+	height:32px;
+	line-height:26px;
+	min-height:30px;
+	padding:0 15px;
+	position:relative;
+	text-decoration:none;
+	text-align: center;
 }
 
 /*#UbcMainNav li:first-child { padding-left: 10px; } */
@@ -424,13 +429,13 @@ text-align: center;
 
 #UbcMainNav li {
 /*position: relative;*/
-margin: 2px 0 -2px 0; 
+	margin: 2px 0 -2px 0; 
 }
 
 #quicktabs-1 {
-border-bottom: solid 30px #EBEFF1;
-padding:0 0 3px;
-position:relative;
+	border-bottom: solid 30px #EBEFF1;
+	padding:0 0 3px;
+	position:relative;
 }
 
 #quicktabs-1 #quicktabs_container_1 {
@@ -470,93 +475,90 @@ display: inline;
 }
 
 .ui-tabs-nav a, .ui-tabs-nav a span {
-background:none;
-display:block;
-padding:0 0px;
+	background:none;
+	display:block;
+	padding:0 0px;
 }
 
 #UbcContentSidebar #widget-container {
-  min-height: 250px;
-  border-bottom: solid 30px #EBEFF1;
-  margin: 10px 0 16px 0;
-  padding:0 0 5px;
-  position:relative;
+    min-height: 250px;
+    border-bottom: solid 30px #EBEFF1;
+    margin: 10px 0 16px 0;
+    padding:0 0 5px;
+    position:relative;
 }
 
 #UbcContentSidebar #headings {
-background: #002859;
-color: #FFFFFF;
-font-size:0.9em;
-letter-spacing:1px;
-margin:0;
-text-align:center;
-height: 30px;
+	background: #002859;
+	color: #FFFFFF;
+	font-size:0.9em;
+	letter-spacing:1px;
+	margin:0;
+	text-align:center;
+	height: 30px;
 }
 
 #UbcContentSidebar #headings li {
-list-style-type: none;
-padding: 7px 0 0 0;
-border-right: solid 1px white;
-background: none repeat scroll 0 0 #002859;
-height: 23px;
+	list-style-type: none;
+	padding: 7px 0 0 0;
+	border-right: solid 1px white;
+	background: none repeat scroll 0 0 #002859;
+	height: 23px;
 }
 
 #UbcContentSidebar #headings li.ui-tabs-selected {
-background: #7B97A8;
+	background: #7B97A8;
 }
 
 #UbcContentSidebar #headings a {
-color: #FFFFFF;
-text-decoration: none;
-font-weight: bold;
-background: url("_ubc_clf/img/content/selectedQuickLink.gif") no-repeat bottom center;
-height: 27px;
-position: relative;
-z-index: 45;
-letter-spacing: 1;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+	background: url("_ubc_clf/img/content/selectedQuickLink.gif") no-repeat bottom center;
+	height: 27px;
+	position: relative;
+	z-index: 45;
+	letter-spacing: 1;
 }
 
 #UbcContentSidebar #headings li.ui-tabs-selected a {
 background: none;
 }
 
-/*** ^ error above this line */
-
-
 
 /* tag widget quicktab styles */
 #UbcContentSidebar .views-field-nothing a {
-height:100%;
-margin:0;
-padding:0;
-position:absolute;
-right:8px;
-text-indent:-5000px;
-top:0;
-width:22px;
+	height:100%;
+	margin:0;
+	padding:0;
+	position:absolute;
+	right:8px;
+	text-indent:-5000px;
+	top:0;
+	width:22px;
 }
 
 #UbcContentSidebar .views-field-nothing a {
-background:url("_ubc_clf/img/content/calloutArrowOff.gif") no-repeat scroll right center transparent;
-color:#00457C;
-display:block;
-font-size:90%;
-font-weight:bold;
-padding:0em 30px 0em 5px;
-text-decoration:none;
+	background:url("_ubc_clf/img/content/calloutArrowOff.gif") no-repeat scroll right center transparent;
+	color:#00457C;
+	display:block;
+	font-size:90%;
+	font-weight:bold;
+	padding:0em 30px 0em 5px;
+	text-decoration:none;
 }
 
 #UbcContentSidebar .views-field-nothing a:hover {
-background:url("_ubc_clf/img/content/calloutArrowOn.gif") no-repeat scroll right center transparent;
+	background:url("_ubc_clf/img/content/calloutArrowOn.gif") no-repeat scroll right center transparent;
 }
 
 /* side menu styles */
 #UbcContent #UbcSecondNav {
-padding: 25px 0 0 19px;
+	padding: 25px 0 0 19px;
 }
 
 #UbcContent #UbcSecondNav h2 {
-display: none;
+	display: none;
 }
 
 /* Tag cloud style */
@@ -772,6 +774,101 @@ z-index:4;
 }
 #UbcContent ul#nav {
     margin: 0;
+}
+/* Default slider styles */
+.default .carousel {
+    /*height: 401px;*/
+    overflow: hidden;
+}
+#UbcContent .default .views-field-title .field-content a {
+	display: block;
+	padding: 8px 0 20px;
+	position: relative;
+	z-index: 1;
+	font-size: 150%;
+	color: white;
+	padding: 10px 0 7.5px;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+}
+.default .views-field-field-news-article-caption, .default .carousel .views-field-title {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+.default .carousel .view-news-views {
+    position: relative;
+}
+.default .carousel .views-field-view-node a {
+    display: block;
+	background: url('images/sprites.png') no-repeat;
+	background-position: -15px -322px;
+	height: 26px;
+	width: 100px;
+	line-height: 0;
+	font-size: 0;   
+	cursor: pointer; 
+    margin: 7.5px 0 0 0;	
+}
+.default .carousel .views-field-view-node a:hover {
+    background-position: -15px -346px;
+}
+
+.carouselControls
+{
+	position:absolute;
+	right:10px;
+	bottom:5px;
+	z-index:5;
+}
+
+.default .stop, .default .start, .default #prev, .default #next {
+	/*position: absolute;*/
+	z-index: 5;
+	background: url('images/sprites.png') no-repeat;
+	background-position: -133px -326px;
+	height: 22px;
+	width: 22px;
+	float:left;
+	margin-right:3px;
+	/*top: 340px;
+	left: 467px;*/
+	cursor: pointer;
+}
+.default .stop {
+    /*left: 443px;*/
+    position:absolute;
+    left:-24px;
+    top:0px;
+    background-position: -179px -326px;
+}
+.default .start {
+    left:-24px;
+    top:0px;
+    /*left: 443px;*/
+    position:absolute;
+    background-position: -157px -326px;
+}
+.default #next {
+    /*left: 522px;*/
+    background-position: -200px -326px;
+}
+
+.UbcHeadlineNavPageCount
+{
+	color:white;
+	font-weight:bold;
+	float:left;
+	/*position: absolute;*/
+	z-index: 5;
+	padding-top:6px;
+	margin-right:3px;
+	/*left:494px;
+	bottom:15px;*/
+	/*top: 265px;*/
+	/*top: 340px;
+	left: 467px;*/
 }
 
 /* Transparent slider styles */
@@ -1017,55 +1114,3 @@ div.vertical-tabs {
 .option6 #UbcHeader li#UbcSubUnitLine a span {
     color: #7491A3;
 }
-
-/** Styles for TinyMCE editor */
-.mceContentBody p {
-    margin: 1em 0;
-    line-height: 1.5em;
-}
-.mceContentBody ol, .mceContentBody ul {
-    margin: 10px 0 10px 20px;
-}
-.mceContentBody ul li {
-    list-style: disc;
-}
-.mceContentBody ol li {
-    list-style: decimal;
-}
-.mceContentBody h1, .mceContentBody h2, .mceContentBody h3, .mceContentBody h4, .mceContentBody h5, .mceContentBody h6 {
-    margin: 1em 0 0.5em 0;
-    font-weight: bold;
-    color: #123B5C;
-}
-
-.mceContentBody h2 {
-    font-size: 150%;
-}
-.mceContentBody em {
-    font-style: italic;
-}
-.mceContentBody strong {
-    font-weight: bold;
-}
-.mceContentBody .mceItemTable.table-with-borders th, .mceContentBody .table-with-borders.mceItemTable td, .mceContentBody .mceItemTable.table-with-borders caption {
-    border: none;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-}
-.mceContentBody .mceItemTable.table-with-borders {
-    border: none;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    width: 100%;
-}
-
-/* Table styles - if borders needed (must add .tables-with-borders class in WYSIWYG profile */
-#UbcContent .table-with-borders th, #UbcContent .table-with-borders td, #UbcContent .table-with-borders caption {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-}
-#UbcContent table.table-with-borders {
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-}
-

@@ -79,6 +79,7 @@
           }
           $('#nav li:nth-child(' + number_of_slides + ')').css('margin-right', '0'); 
         }
+        // transparent
         else if ($(this).hasClass('transparent_slider')) {
           $(this).find('.carousel .view-content').cycle({
             fx: 'scrollRight',
@@ -113,6 +114,18 @@
           });        
           $(this).find('.carousel .view-content .views-field-title').after('<div class="transparent-carousel-bg">');
         }
+        
+        $('.stop').click(function () {
+          $('.default .start').show();
+          $('.default .stop').hide();
+          $('.carousel .view-content').cycle('pause');
+        });
+        $('.default .start').click(function () {
+          $('.default .start').hide();
+          $('.default .stop').show();
+          $('.carousel .view-content').cycle('resume');
+        });
+        
       });
       
       
@@ -125,6 +138,5 @@
     $('.UbcHeadlineNavPageCount').html(caption);
     return false; 
   }
-
 
 }(jQuery));

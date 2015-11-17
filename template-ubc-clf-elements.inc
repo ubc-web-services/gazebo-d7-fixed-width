@@ -4,7 +4,7 @@
  * Scripts for bottom of page
  */
 
-function gazebo_ubc_clf_bottom_scripts($variables) {
+/*function gazebo_ubc_clf_bottom_scripts($variables) {
   $output = '<script type="text/javascript"> 
     <!--//--><![CDATA[//><!--var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src=\'" + gaJsHost + "google-analytics.com/ga.js\' type=\'text/javascript\'%3E%3C/script%3E"));//--><!]]></script>';
   $output .= '<script type="text/javascript"> 
@@ -12,6 +12,15 @@ function gazebo_ubc_clf_bottom_scripts($variables) {
       try{var pageTracker = _gat._getTracker("' . theme_get_setting('google_analytics') . '");pageTracker._trackPageview();} catch(err) {}
     //--><!]]>
   </script>';
+return $output; 
+}*/
+
+/* The above code didn't correctly log Google Analytics */
+function gazebo_ubc_clf_bottom_scripts($variables) {
+  $output = '<script type="text/javascript"> 
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src=\'" + gaJsHost + "google-analytics.com/ga.js\' type=\'text/javascript\'%3E%3C/script%3E"));</script>';
+  $output .= '<script type="text/javascript"> 
+      try{var pageTracker = _gat._getTracker("' . theme_get_setting('google_analytics') . '");pageTracker._trackPageview();} catch(err) {}</script>';
 return $output; 
 }
 
@@ -74,21 +83,21 @@ function gazebo_ubc_social_media_links($items = NULL, $style = 'plain') {
 
 function gazebo_ubc_clf_carousel($duration = NULL, $speed = NULL, $style = NULL) {  
   // output carousel view
-  $output = '  <div id="UBCHeadlineWidget" data-duration="';
-  if (isset($duration)) {
-    $output .= $duration;
+  $output = '  <div id="UBCHeadlineWidget" ';
+  if (isset($duration['element'])) {
+    $duration = $duration['element'];	
   }
   else {
-    $output .= theme_get_setting('carousel_duration');
+    $duration = theme_get_setting('carousel_duration');
   }
-  $output .= '" data-speed="';
+  $output .= 'data-duration="' . $duration . '"';
   if (isset($speed)) {
-    $output .= $speed;
+    $speed = $speed;
   }
   else {
-    $output .= theme_get_setting('carousel_speed');
+    $speed = theme_get_setting('carousel_speed');
   }
-  $output .= '" class="';
+  $output .= ' data-speed="' . $speed . '" class="';
   if (isset($style)) {
     $output .= $style;
   }
@@ -153,6 +162,8 @@ function gazebo_ubc_clf_toolbar($variables) {
 	 				  '<input type="hidden" name="site" value="'.$search_domain.'" class="UbcSearchField" />';
   }
 
+  
+
   $output = '
   <div id="UbcToolBarWrapper">
     <div id="UbcToolBar" class="UbcContainer">';
@@ -161,7 +172,7 @@ function gazebo_ubc_clf_toolbar($variables) {
     l(t('Campuses'), 'http://www.ubc.ca/campuses/', array('attributes' => array('id' => 'UbcCampusLinks')) ),
     l(t('UBC Directories'), 'http://www.ubc.ca/directories/', array('attributes' => array('id' => 'UbcDirectLinks')) ),
     l(t('Quick Links'), 'http://www.ubc.ca/quicklinks/', array('attributes' => array('id' => 'UbcQuickLinks')) ),
-    '<form id="UbcSearchForm" action="http://www.ubc.ca/search/refine/" method="get">
+    '<form id="UbcSearchForm" action="//www.ubc.ca/search/refine/" method="get">
        <input type="text" name="q" value="' . $search_text . '" class="UbcSearchField" />'.$search_domain.'
        <input type="image" src="' . base_path() . path_to_theme() . '/_ubc_clf/img/header/spacer.gif" class="UbcSearchBtn" value="Search" alt="Search" />
      </form>',

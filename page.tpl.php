@@ -94,7 +94,7 @@
         <?php endif; ?>
 
 
-		<div id="UbcMainContent" <?php if (!$is_front): ?>class="maincontent-node-<?php if (isset($node)): print $node->nid; endif; ?><?php endif; ?>">
+		<div id="UbcMainContent" <?php if (!$is_front): ?>class="maincontent-node-<?php if (isset($node)): print $node->nid; endif; ?>"<?php endif; ?>>
 		          
         <?php if ($tabs = render($tabs)): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
         <?php if ($title): print '<h1'. ($tabs ? ' class="with-tabs"' : '') .'>'. $title .'</h1>'; endif; ?>

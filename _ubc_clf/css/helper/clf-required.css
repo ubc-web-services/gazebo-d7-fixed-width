@@ -87,17 +87,16 @@ body .UbcContainer
 	text-indent: -5000px;
 }
 
-#UbcToolNav li a#UbcQuickLinks
+#UbcToolNav li a#UbcCampusLinks
 {
-   /* width: 118px; */
-   width: 115px;
+    width: 95px;
     background: url(../../../images/sprites.png) no-repeat;
-    background-position: -20px -76px;
+    background-position: -20px -224px;
 }
 
-#UbcToolNav li a#UbcQuickLinks.UbcSelected
+#UbcToolNav li a#UbcCampusLinks.UbcSelected
 {
-	background-position-y: -104px;
+	background-position-y: -252px;
 }
 
 #UbcToolNav li a#UbcDirectLinks
@@ -122,12 +121,11 @@ body .UbcContainer
 	background-position: 0 -44px;
 }*/
 
-#UbcToolNav li a#UbcCampusLinks
+#UbcToolNav li a#UbcQuickLinks
 {
-	/*width: 115px;*/
-	width: 92px;
+	width: 118px;
 	background: url(../../../images/sprites.png) no-repeat;
-    background-position: -20px -224px;
+    background-position: -20px -76px;
 }
 
 /*#UbcToolNav li a#UbcQuickLinks:hover
@@ -135,9 +133,9 @@ body .UbcContainer
 	background-position: 0 -22px;
 }*/
 
-#UbcToolNav li a#UbcCampusLinks.UbcSelected
+#UbcToolNav li a#UbcQuickLinks.UbcSelected
 {
-	background-position-y: -252px;
+	background-position-y: -104px;
 }
 
 /*#UbcToolNav li a#UbcQuickLinks.selected:hover

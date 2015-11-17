@@ -45,13 +45,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
-  <?php if ($canonical_domain): ?>
-  <link rel="canonical" href="<?php print $canonical_domain . $_SERVER['REQUEST_URI']; ?>" />
-  <?php endif; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  <?php print $custom_inline_css; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
@@ -61,5 +57,6 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
   <?php print theme('ubc_clf_bottom_scripts'); ?>
+</script>
 </body>
 </html>

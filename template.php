@@ -25,16 +25,6 @@ function gazebo_preprocess_html(&$vars) {
   }
   $vars['classes_array'][] = ' ' . theme_get_setting('clf_colour_option') . ' ';
    
-  // add user-added CSS to theme output
-  if (theme_get_setting('paste_css')) {
-    $vars['custom_inline_css'] = '<style>' . theme_get_setting('paste_css') . '</style>';
-  }
-  else {
-    $vars['custom_inline_css'] = '';
-  }
-
-  $vars['canonical_domain'] = theme_get_setting('canonical_domain');  
-
 }
 
 
@@ -62,22 +52,23 @@ function gazebo_preprocess_page(&$vars) {
   if(theme_get_setting('clf_dropdown_show')) { $vars['clf_dropdown_show'] = 'true'; } else { $vars['clf_dropdown_show'] = 'false'; }
   
   // add custom css file (if it exists)
-  if (file_exists(conf_path() .'/css/custom.css')) {
-    drupal_add_css(conf_path() .'/css/custom.css');
+  if (file_exists($custom_css = conf_path() .'/css/custom.css')) {
+    $add_custom_css = 1;
   } 
+  else {
+    $add_custom_css = 0;  
+  }
+  // add custom css file for IE (if exists)
+  if (file_exists($custom_ie_css = conf_path() .'/css/ie.css')) {
+    $add_custom_ie_css = 1;
+  } 
+  else {
+    $add_custom_ie_css = 0;  
+  }
   
-  /**
-   * Stylesheets for IE
-   */
-  if (file_exists(conf_path() .'/css/ie.css')) {
-    // Add conditional stylesheets for IE 9 and below
-    drupal_add_css(conf_path() .'/css/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
-  } 
-  if (file_exists(conf_path() .'/css/ie7.css')) {
-    // Add conditional stylesheets for IE 7 and below
-    drupal_add_css(conf_path() .'/css/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lte IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
-  } 
-  
+  $vars['custom_css'] = $add_custom_css;
+  $vars['custom_ie_css'] = $add_custom_ie_css;
+
   $vars['clf_pomlink'] = 'http://www.aplaceofmind.ubc.ca/';
   $vars['clf_pomfeed'] = theme_get_setting('clf_pomfeed');
   $vars['clf_website'] = theme_get_setting('clf_website');
@@ -193,9 +184,7 @@ function gazebo_dropdown($menu) {
 
     $i = 0;
 
-	// $tree = menu_tree_page_data($menu);
-    $tree = menu_tree_all_data($menu);
-
+	$tree = menu_tree_page_data($menu);
 
 	$html = '<ul id="UbcMainNav" class="UbcContainer ' . theme_get_setting('clf_dropdown_style') . '">';
 
@@ -244,6 +233,10 @@ function gazebo_dropdown($menu) {
 function clf_build_hcard($fields) {
 	$html = '';
 	$adr = '';
+	
+	// this function seems to be run twice, once with this var empty
+	if(empty($fields['website']))
+	  $fields['website'] = '';
 	
 	if($fields['unitname']!='') {
 		if($fields['clf_website']!='') {

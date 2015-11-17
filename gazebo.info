@@ -3,6 +3,9 @@ description = Flexible two-, three-column or full-width Drupal template.
 version = VERSION
 core = 7.x
 engine = phptemplate
+stylesheets[all][] = _ubc_clf/css/helper/reset.css
+stylesheets[all][] = _ubc_clf/css/helper/clf-required.css
+
 stylesheets[all][] = _ubc_clf/css/clf-required-fixedwidth.css
 ;stylesheets[all][] = _ubc_clf/css/clf-2-column.css
 stylesheets[all][] = _ubc_clf/css/clf-optional.css
